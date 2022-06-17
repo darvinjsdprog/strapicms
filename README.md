@@ -33,3 +33,5 @@ docker-compose up -d
 
 Navigate to http://localhost:1337/admin
 this will open a strapi instance with meta content types created.
+
+Make sure to add dummy data to test graphql queries, if a content model is empty you won't be able to query that model.
