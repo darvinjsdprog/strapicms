@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terms_of_uses",
+  "info": {
+    "singularName": "terms-of-use",
+    "pluralName": "terms-of-uses",
+    "displayName": "Terms of use",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Version": {
+      "type": "decimal",
+      "required": true,
+      "unique": true
+    },
+    "MasterBuyerAgreenment": {
+      "type": "richtext",
+      "required": true
+    },
+    "MasterSellerAgreement": {
+      "type": "richtext",
+      "required": true
+    },
+    "NFTAmendment": {
+      "type": "richtext",
+      "required": true
+    },
+    "WebSiteTermsOfUse": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

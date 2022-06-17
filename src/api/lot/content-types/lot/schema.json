@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lots",
+  "info": {
+    "singularName": "lot",
+    "pluralName": "lots",
+    "displayName": "Lot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LotId": {
+      "type": "string",
+      "required": true
+    },
+    "AuctionId": {
+      "type": "string"
+    },
+    "AdditionalMedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios"
+      ]
+    },
+    "Ended": {
+      "type": "boolean",
+      "default": false
+    },
+    "Asset": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nft-asset.nft-asset"
+    }
+  }
+}

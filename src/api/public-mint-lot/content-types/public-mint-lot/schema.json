@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "public_mint_lots",
+  "info": {
+    "singularName": "public-mint-lot",
+    "pluralName": "public-mint-lots",
+    "displayName": "Public Mint Lot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LotId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "PublicMintId": {
+      "type": "string",
+      "required": true
+    },
+    "Cost": {
+      "type": "string"
+    },
+    "Asset": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nft-asset.nft-asset"
+    },
+    "AditionalMedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios"
+      ]
+    },
+    "Ended": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

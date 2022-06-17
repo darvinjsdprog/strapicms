@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "singularName": "sale",
+    "pluralName": "sales",
+    "displayName": "Sale",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "MainMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios"
+      ]
+    },
+    "StartDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "EndDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "lots": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lot.lot"
+    },
+    "Slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "HeroHeadline": {
+      "type": "richtext"
+    }
+  }
+}
