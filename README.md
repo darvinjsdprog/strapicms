@@ -5,6 +5,26 @@ For the Docker implementation of Strapi V4: [Strapi with Docker](https://blog.de
 
 ### `start`
 
+create .env file in the root
+with this content
+
+```
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=
+API_TOKEN_SALT=
+ADMIN_JWT_SECRET=
+JWT_SECRET=
+
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=strapi
+DATABASE_USERNAME=strapi
+DATABASE_PASSWORD=
+NODE_ENV=development
+DATABASE_CLIENT=postgres
+```
+
 To run strapi inside a docker container and postgres in its own container run:
 
 ```
